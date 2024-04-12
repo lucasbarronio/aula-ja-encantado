@@ -88,7 +88,7 @@ export default class Cidade {
     console.log(`Prefeito: ${this.prefeito}`)
     console.log(`Estado: ${this.estado}`)
     console.log(`População: ${this.populacao}`)
-    console.log(`Extensão: ${this.extensao}`)
+    console.log(`Extensão: ${this.extensao}km`)
     console.log(`Gentílico: ${this.gentilico}`)
   }
 }
