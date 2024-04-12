@@ -1,2 +1,3 @@
-# *JA Encantado*
-Repositório de aulas realizadas na turma do JA 2023 - 2024.
+# Aulas JA Encantado
+
+Projetos realizados na turma do JA de Encantado 2023 - 2024.
