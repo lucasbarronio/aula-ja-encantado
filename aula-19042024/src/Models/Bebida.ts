@@ -1,11 +1,18 @@
 export default class Bebida {
 
+    private _codigo: number = 0;
     private _nome: string = "";
     private _cor: string = "";
     private _temperatura: string = "";
     private _teor: string = "";
     private _quantidade: string = "";
 
+    public get codigo(): number {
+        return this._codigo;
+    }
+    public set codigo(value: number) {
+        this._codigo = value;
+    }
     public get nome(): string {
         return this._nome;
     }
@@ -54,6 +61,8 @@ export default class Bebida {
         if (quantidade !== undefined) {
             this.quantidade = quantidade;
         }
-     }
+    }
+
+
 
 }
