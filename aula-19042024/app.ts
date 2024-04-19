@@ -7,7 +7,6 @@ let bebidaController: BebidaController = new BebidaController();
 
 for (let i = 0; i < 5; i++) {
     let b: Bebida = new Bebida();
-    b.codigo = i;
     b.nome = prompt("Digite o nome da bebida: ");
     b.cor = prompt("Digite a cor da bebida: ");
     b.temperatura = prompt("Digite a temperatura da bebida: ");
