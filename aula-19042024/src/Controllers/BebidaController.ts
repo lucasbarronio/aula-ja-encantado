@@ -17,7 +17,7 @@ export default class BebidaController {
 
     public excluir(codigo: number) {
         if (codigo !== null) {
-            this._bebidas.splice(codigo, 1);
+            this._bebidas.splice((codigo - 1), 1);
         }
     }
 }
