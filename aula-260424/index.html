@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema</title>
+  <style>
+    .titulo {
+      font-size: 36px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin: 0%;
+    }
+
+    input {
+      height: 20px;
+      width: 85%;
+      background-color: lightgray;
+      font-size: 20px;
+      border-width: 1px;
+      border-color: #6F7E7E;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    button {
+      width: 160px;
+      height: 26px;
+      font-size: 16px;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    table {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      border-collapse: collapse;
+    }
+
+    thead {
+      background-color: lightgray;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+
+
+    .tabela tr {
+      border-bottom: 1px solid #6F7E7E;
+    }
+
+    .tabela td {
+      padding: 12px 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 class="titulo">Todos os cadastros </h1>
+    <hr>
+    <div>
+      <input type="text"> <button>Pesquisar</button>
+    </div>
+  </header>
+  <section>
+    <table class="tabela">
+      <thead>
+        <tr>
+          <td>#ID</td>
+          <td>Nome</td>
+          <td>Idade</td>
+          <td>Profissão</td>
+          <td>Tamanho</td>
+          <td>Peso</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Lucas Barronio</td>
+          <td>19</td>
+          <td>Auxiliar Administrativo</td>
+          <td>176</td>
+          <td>63</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jean Dias</td>
+          <td>38</td>
+          <td>Professor</td>
+          <td>180</td>
+          <td>78</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Barack Obama</td>
+          <td>60</td>
+          <td>Politico</td>
+          <td>178</td>
+          <td>100</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <footer>
+    <button>Excluir</button>
+    <button>Editar</button>
+    <button>Voltar</button>
+  </footer>
+</body>
+
+</html>
