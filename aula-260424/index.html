@@ -9,7 +9,8 @@
     .titulo {
       font-size: 36px;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
-      margin: 0%;
+      margin: 20px 0;
+      color: #353636;
     }
 
     input {
@@ -17,15 +18,23 @@
       width: 85%;
       background-color: lightgray;
       font-size: 20px;
-      border-width: 1px;
+      border-width: 0px;
       border-color: #6F7E7E;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
+      flex-grow: 1;
+      margin-right: 5px;
+      box-shadow: 1px 1px #778899;
     }
 
     button {
       width: 160px;
       height: 26px;
       font-size: 16px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: bold;
+      color: white;
+      border: none;
+      background-color: #778899;
     }
 
     div {
@@ -34,25 +43,53 @@
       justify-content: space-between;
     }
 
-    table {
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    .tabela {
       border-collapse: collapse;
-    }
-
-    thead {
-      background-color: lightgray;
+      margin: 25px 0;
+      margin-top: 10px;
       font-size: 20px;
-      font-weight: bold;
+      min-width: 100%;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .tabela thead tr {
+      background-color: lightslategray;
+      text-align: left;
+      color: white;
+      font-size: 22px;
     }
 
 
+    .tabela th,
+    .tabela td {
+      padding: 12px 15px;
+    }
 
-    .tabela tr {
+    .tabela tbody tr {
       border-bottom: 1px solid #6F7E7E;
     }
 
-    .tabela td {
-      padding: 12px 15px;
+    .tabela tbody tr:nth-of-type(even) {
+      background-color: lightgray;
+    }
+
+    .tabela tbody tr:last-of-type {
+      border-bottom: 2px solid #353636;
+    }
+
+    .botoes {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .excluir {
+      background-color: #b13333;
+      margin-right: 20px;
+    }
+
+    .voltar {
+      margin-left: auto;
     }
   </style>
 </head>
@@ -60,21 +97,20 @@
 <body>
   <header>
     <h1 class="titulo">Todos os cadastros </h1>
-    <hr>
-    <div>
-      <input type="text"> <button>Pesquisar</button>
+    <div class="div">
+      <input type="text" placeholder="Digite o que deseja procurar"> <button>Pesquisar</button>
     </div>
   </header>
   <section>
     <table class="tabela">
       <thead>
         <tr>
-          <td>#ID</td>
-          <td>Nome</td>
-          <td>Idade</td>
-          <td>Profissão</td>
-          <td>Tamanho</td>
-          <td>Peso</td>
+          <th>#ID</th>
+          <th>Nome</th>
+          <th>Idade</th>
+          <th>Profissão</th>
+          <th>Tamanho</th>
+          <th>Peso</th>
         </tr>
       </thead>
       <tbody>
@@ -102,14 +138,86 @@
           <td>178</td>
           <td>100</td>
         </tr>
+        <tr>
+          <td>4</td>
+          <td>Barack Obama</td>
+          <td>60</td>
+          <td>Politico</td>
+          <td>178</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Barack Obama</td>
+          <td>60</td>
+          <td>Politico</td>
+          <td>178</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Barack Obama</td>
+          <td>60</td>
+          <td>Politico</td>
+          <td>178</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Barack Obama</td>
+          <td>60</td>
+          <td>Politico</td>
+          <td>178</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Barack Obama</td>
+          <td>60</td>
+          <td>Politico</td>
+          <td>178</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Barack Obama</td>
+          <td>60</td>
+          <td>Politico</td>
+          <td>178</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Barack Obama</td>
+          <td>60</td>
+          <td>Politico</td>
+          <td>178</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Barack Obama</td>
+          <td>60</td>
+          <td>Politico</td>
+          <td>178</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Barack Obama</td>
+          <td>60</td>
+          <td>Politico</td>
+          <td>178</td>
+          <td>100</td>
+        </tr>
       </tbody>
     </table>
   </section>
-  <footer>
-    <button>Excluir</button>
+  <div2 class="botoes">
+    <button class="excluir">Excluir</button>
     <button>Editar</button>
-    <button>Voltar</button>
-  </footer>
+    <button class="voltar">Voltar</button>
+  </div2>
 </body>
 
 </html>
