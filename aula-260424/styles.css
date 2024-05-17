@@ -1,0 +1,78 @@
+/* Estilo para o título */
+.titulo {
+  font-size: 36px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 20px 0;
+  color: #353636;
+}
+
+/* Estilo adicional para inputs */
+input.form-control {
+  background-color: lightgray;
+  font-size: 20px;
+  border: 0;
+  box-shadow: 1px 1px #778899;
+}
+
+/* Estilo para labels */
+label {
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 10px;
+  margin-bottom: 0;
+  color: #353636;
+}
+
+/* Estilo para botões personalizados */
+.btn {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+.btn-primary.salvar {
+  background-color: #218d35;
+  color: white;
+}
+
+
+/* Estilo para a tabela */
+.tabela {
+  margin: 25px 0;
+  margin-top: 10px;
+  font-size: 20px;
+  width: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.tabela thead tr {
+  background-color: lightslategray;
+  color: white;
+  font-size: 22px;
+}
+
+.tabela th,
+.tabela td {
+  padding: 12px 15px;
+}
+
+.tabela tbody tr:nth-of-type(even) {
+  background-color: lightgray;
+}
+
+.tabela tbody tr:last-of-type {
+  border-bottom: 2px solid #353636;
+}
+
+/* Estilo para divs flex */
+.botoes {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+
+/* Estilo adicional para o form-group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
