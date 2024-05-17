@@ -16,5 +16,7 @@ for (let i = 0; i < 5; i++) {
 }
 bebidaController.recuperarTodos();
 bebidaController.excluir(Number(prompt("Digite o código da bebida que deseja excluir:")));
+bebidaController.recuperaUm(Number(prompt("Digite o código da bebida que deseja procurar:")));
+bebidaController.editar(Number(prompt("Digite o numero da bebida que deseja editar: ")));
 bebidaController.recuperarTodos();
 
