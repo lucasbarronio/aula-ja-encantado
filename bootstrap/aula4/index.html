@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Layout</title>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <style>
+    .h400 {
+      height: 400px;
+    }
+
+    .h100 {
+      height: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="d-flex justify-content-between align-items-center px-4 pt-2">
+    <h1>Layout em Grid</h1>
+    <h3><a href="../index.html">Voltar ao Inicio</a></h3>
+  </div>
+  <hr>
+  <div class="container">
+    <h6>3-6-3</h6>
+    <div class="row">
+      <div class="col-3 bg-dark opacity-50 h400"></div>
+      <div class="col-6 bg-dark opacity-75 h400"></div>
+      <div class="col-3 bg-dark opacity-50 h400"></div>
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <h6>Coluna dinâmica-4-5-Coluna dinâmica</h6>
+    <div class="row">
+      <div class="col bg-dark opacity-50 h400"></div>
+      <div class="col-4 bg-dark opacity-75 h400"></div>
+      <div class="col-5 bg-dark opacity-50 h400"></div>
+      <div class="col bg-dark opacity-25 h400"></div>
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <h6>12-12-12-12 ou 12-2-10-12 com Breakpoint Small</h6>
+    <div class="row">
+      <div class="col-12 bg-dark opacity-50 h100"></div>
+      <div class="col-12 col-sm-2 bg-dark opacity-75 h400"></div>
+      <div class="col-12 col-sm-10 bg-dark opacity-25 h400"></div>
+      <div class="col-12 bg-dark opacity-50 h100"></div>
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <h6>5 colunas dinâmicas + 7 colunas dinâmicas</h6>
+    <div class="row">
+      <div class="row">
+        <div class="col bg-dark opacity-75 h100"></div>
+        <div class="col bg-dark opacity-50 h100"></div>
+        <div class="col bg-dark opacity-25 h100"></div>
+        <div class="col bg-dark opacity-50 h100"></div>
+        <div class="col bg-dark opacity-75 h100"></div>
+      </div>
+      <div class="row">
+        <div class="col bg-dark opacity-75 h100"></div>
+        <div class="col bg-dark opacity-50 h100"></div>
+        <div class="col bg-dark opacity-25 h100"></div>
+        <div class="col bg-dark opacity-50 h100"></div>
+        <div class="col bg-dark opacity-75 h100"></div>
+        <div class="col bg-dark opacity-50 h100"></div>
+        <div class="col bg-dark opacity-25 h100"></div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <h3 style="margin-left: 20px; padding-top: 30px;"><a href="../index.html">Voltar ao Inicio</a></h3>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js">
+  </script>
+</body>
+
+</html>
