@@ -63,6 +63,13 @@ export default class Bebida {
         }
     }
 
-
+    public imprimeAtributos(): void {
+        console.log(`ID: ${this._codigo}`);
+        console.log(`Nome: ${this._nome}`);
+        console.log(`Cor: ${this._cor}`);
+        console.log(`Temperatura: ${this._temperatura}`);
+        console.log(`Teor alcoólico: ${this._teor}%`);
+        console.log(`Quantidade: ${this._quantidade}L\n`);
+    }
 
 }

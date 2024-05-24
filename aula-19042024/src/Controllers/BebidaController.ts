@@ -14,38 +14,40 @@ export default class BebidaController {
     }
 
     public recuperarTodos(): void {
-        console.log(this._bebidas);
+        this._bebidas.forEach(element => {
+            element.imprimeAtributos();
+        });
     }
 
-    public recuperaUm(codigo: number): void {
-        if (codigo !== null) {
-            for (let index = 0; index < this._bebidas.length; index++) {
-                if (codigo == this._bebidas[index].codigo) {
-                    console.log(this._bebidas[index]);
-                }
+    public recuperaUm(codigo: number): Bebida | undefined {
+        return this._bebidas.find(bebida => bebida.codigo === codigo);
+    }
 
-            }
+
+    public excluir(b: Bebida): boolean {
+        const element = this.recuperaUm(b.codigo);
+        if (element) {
+            this._bebidas.splice(element.codigo - 1, 1);
+            return true;
+        } else {
+            return false;
         }
     }
 
-    public excluir(codigo: number) {
-        if (codigo !== null) {
-            this._bebidas.splice((codigo - 1), 1);
-        }
-    }
-
-
-    public editar(codigo: number) {
-        if (codigo !== null) {
-            for (let index = 0; index < this._bebidas.length; index++) {
-                if (codigo == this._bebidas[index].codigo) {
-                    this._bebidas[index].nome = prompt("Digite o novo nome: ")
-                    this._bebidas[index].cor = prompt("Digite a nova cor: ")
-                    this._bebidas[index].temperatura = prompt("Digite a nova temperatura: ")
-                    this._bebidas[index].teor = prompt("Digite o novo teor: ")
-                    this._bebidas[index].quantidade = prompt("Digite a nova quantidade: ")
-                }
-            }
+    public editar(b: Bebida): Bebida | undefined {
+        const element = this.recuperaUm(b.codigo);
+        if (element) {
+            let b: Bebida = new Bebida();
+            b.codigo = element.codigo;
+            b.nome = prompt("Digite o nome da bebida: ");
+            b.cor = prompt("Digite a cor da bebida: ");
+            b.temperatura = prompt("Digite a temperatura da bebida: ");
+            b.teor = prompt("Digite o teor alcoólico da bebida: ");
+            b.quantidade = prompt("Digite a quantidade de bebida: ");
+            this._bebidas.splice(element.codigo - 1, 1, b);
+            return b;
+        } else {
+            return undefined;
         }
     }
 }
