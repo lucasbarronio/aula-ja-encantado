@@ -18,13 +18,11 @@
 //         "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
 //     }]
 
+const corpo_tabela = document.getElementById('corpo_tabela');
 
 async function main() {
     const response = await fetch('https://brasilapi.com.br/api/ibge/uf/v1');
     const dados = await response.json();
-
-    const tabela = document.getElementById('tabela');
-    const corpo_tabela = document.getElementById('corpo_tabela');
 
     dados.forEach(element => {
         const trow = document.createElement('tr');
@@ -32,14 +30,14 @@ async function main() {
         const td = document.createElement('td');
         const td1 = document.createElement('td');
         const td2 = document.createElement('td');
+        const td3 = document.createElement('td');
         td.textContent = element.id;
         td1.textContent = element.nome;
         td2.textContent = element.sigla;
+        td3.textContent = element.regiao.nome;
         trow.appendChild(td);
         trow.appendChild(td1);
         trow.appendChild(td2);
-        const td3 = document.createElement('td');
-        td3.textContent = element.regiao.nome;
         trow.appendChild(td3);
     });
 }
