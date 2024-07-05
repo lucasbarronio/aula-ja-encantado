@@ -1,11 +1,13 @@
 import express, { Express, Request, Response } from 'express';
 import BebidaController from './src/Controllers/BebidaController';
 import Bebida from './src/Models/Bebida';
+import cors from 'cors';
 
 const app: Express = express();
 const port: number = 3000;
 let copa: BebidaController = new BebidaController();
 
+app.use(cors());
 app.use(express.json());
 
 app.get('/bebidas', (req: Request, res: Response): Response => {
