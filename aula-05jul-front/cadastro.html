@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <h1 class="text-light pr-5">Jovem Aprendiz</h1>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a role="button" class="btn btn-primary mx-5" href="index.html">Listagem</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <div class="container">
+        <header class="my-4">
+            <h1 class="titulo">Cadastro de bebidas</h1>
+        </header>
+        <form>
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input id="nome" type="text" class="form-control mb-3">
+                <label for="cor">Cor</label>
+                <input id="cor" type="text" class="form-control mb-3">
+                <label for="temperatura">Temperatura</label>
+                <input id="temperatura" type="text" class="form-control mb-3">
+                <label for="teoralcool">Teor Álcool</label>
+                <input id="teoralcool" type="text" class="form-control mb-3">
+                <label for="quantidade">Quantidade</label>
+                <input id="quantidade" type="text" class="form-control mb-3">
+            </div>
+            <div class="botoes mt-4">
+                <button id="salvar" class="btn btn-success salvar">Salvar</button>
+            </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="cadastro.js"></script>
+</body>
+
+</html>
