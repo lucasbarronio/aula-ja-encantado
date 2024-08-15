@@ -1,9 +1,47 @@
-table {
-    border-collapse: collapse;
-    border: 2px solid rgb(140 140 140);
+* {
+  /* Change your font family */
+  font-family: sans-serif;
 }
-th,
-td {
-  border: 1px solid rgb(160 160 160);
-  padding: 8px 10px;
+
+.tabela {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 600px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.tabela thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.tabela th,
+.tabela td {
+  padding: 12px 15px;
+}
+
+.tabela tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.tabela tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.tabela tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.tabela tbody tr:hover {
+  color: #009879;
+}
+
+button a {
+  text-decoration: none;
+  color: #000000;
 }

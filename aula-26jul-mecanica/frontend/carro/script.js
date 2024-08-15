@@ -1,3 +1,10 @@
+async function excluir(id) {
+    await fetch(`http://localhost:3000/carros/${id}`, { 
+        method: 'DELETE' 
+    });
+    window.location.reload();
+}
+
 async function listarCarros() {
     const response = await fetch(`http://localhost:3000/carros`);
     const dados = await response.json();
@@ -27,12 +34,17 @@ async function listarCarros() {
         linha.appendChild(tdCategoria);
         
         const tdDataFabricacao = document.createElement('td');
-        tdDataFabricacao.textContent = item.dataFabricacao;
+        tdDataFabricacao.textContent = item.data_fabricacao;
         linha.appendChild(tdDataFabricacao);
 
         const tdProblema = document.createElement('td');
         tdProblema.textContent = item.problema;
         linha.appendChild(tdProblema);
+
+        const tdAcoes = document.createElement('td');
+        tdAcoes.innerHTML = `<button><a href="cadastro.html?id=${item.id}">Editar</a></button>
+      <button onclick="excluir(${item.id})">Excluir</button>`;
+        linha.appendChild(tdAcoes);
 
         corpoTabela.appendChild(linha);
 

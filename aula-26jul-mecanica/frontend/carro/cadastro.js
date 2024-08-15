@@ -1,3 +1,6 @@
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get('id');
+
 const salvar = document.getElementById('salvar');
 const marcaCampo = document.getElementById('marca');
 const modeloCampo = document.getElementById('modelo');
@@ -6,13 +9,46 @@ const categoriaCampo = document.getElementById('categoria');
 const dataCampo = document.getElementById('dataFabricacao');
 const problemaCampo = document.getElementById('problema');
 
+async function buscarDados() {
+    let resultado = await fetch(`http://localhost:3000/carros/${id}`);
+    if (resultado.ok) {
+        let carro = await resultado.json();
+        console.log(carro);
+        marcaCampo.value = carro.marca;
+        corCampo.value = carro.cor;
+        modeloCampo.value = carro.modelo;
+        categoriaCampo.value = carro.categoria;
+        dataCampo.value = carro.data_fabricacao;
+        problemaCampo.value = carro.problema;
+    } else {
+        window.alert('Ops! Algo deu errado!');
+    }
+}
+
+if (id) {
+    buscarDados();
+}
+
 async function salvarDados(dados){
-    const resultado = await fetch('http://localhost:3000/carros', {
-        method: 'POST',
+    let url = 'http://localhost:3000/carros';
+    let metodo = 'POST';
+    if (id) { // editando
+        url += '/' + id;
+        metodo = 'PUT';
+    }
+
+    const resultado = await fetch(url, {
+        method: metodo,
         body: JSON.stringify(dados),
         headers: {"Content-type": "application/json; charset=UTF-8"}
     });
     console.log(resultado);
+
+    if (resultado.ok) {
+        window.location.href = 'index.html';
+    } else {
+        window.alert('Ops! Algo deu errado!');
+    }
 }
 
 salvar.addEventListener('click', () => {
@@ -33,12 +69,4 @@ salvar.addEventListener('click', () => {
     }
 
     salvarDados(dados);
-
-    marcaCampo.value = "";
-    modeloCampo.value = "";
-    corCampo.value = "";
-    categoriaCampo.value = "";
-    dataCampo.value = "";
-    problemaCampo.value = "";
-    console.log(dados.datafabricacao);
 });

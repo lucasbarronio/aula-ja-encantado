@@ -1,3 +1,10 @@
+async function excluir(id) {
+    await fetch(`http://localhost:3000/pessoas/${id}`, { 
+        method: 'DELETE' 
+    });
+    window.location.reload();
+}
+
 async function listarPessoas() {
     const response = await fetch(`http://localhost:3000/pessoas`);
     const dados = await response.json();
@@ -30,6 +37,11 @@ async function listarPessoas() {
         tdGenero.textContent = item.genero;
         linha.appendChild(tdGenero);
 
+        const tdAcoes = document.createElement('td');
+        tdAcoes.innerHTML = `<button><a href="cadastro.html?id=${item.id}">Editar</a></button>
+      <button onclick="excluir(${item.id})">Excluir</button>`;
+        linha.appendChild(tdAcoes);
+        
         corpoTabela.appendChild(linha);
     });
 }
