@@ -5,7 +5,7 @@ export default class CarroDAO {
 
     public async salvar(b: Carro): Promise<Carro> {
         try {
-            const query: string = `INSERT INTO carros (marca, modelo, cor, categoria, dataFabricacao, problema) VALUES ($1, $2, $3, $4, $5, $6) RETURNING id`;
+            const query: string = "INSERT INTO carros (marca, modelo, cor, categoria, data_fabricacao, problema) VALUES ($1, $2, $3, $4, $5, $6) RETURNING id";
             const values = [b.marca, b.modelo, b.cor, b.categoria, b.dataFabricacao, b.problema];
             const result = await pool.query(query, values);
 
@@ -34,7 +34,7 @@ export default class CarroDAO {
                 carro.modelo = row.modelo;
                 carro.cor = row.cor;
                 carro.categoria = row.categoria;
-                carro.dataFabricacao = row.dataFabricacao;
+                carro.dataFabricacao = row.data_fabricacao;
                 carro.problema = row.problema;
                 carros.push(carro);
             }
@@ -58,7 +58,7 @@ export default class CarroDAO {
                 carro.modelo = result.rows[0].modelo;
                 carro.cor = result.rows[0].cor;
                 carro.categoria = result.rows[0].categoria;
-                carro.dataFabricacao = result.rows[0].dataFabricacao;
+                carro.dataFabricacao = result.rows[0].data_fabricacao;
                 carro.problema = result.rows[0].problema;
                 return carro;
             } else {
@@ -88,7 +88,7 @@ export default class CarroDAO {
 
     public async editar(b: Carro): Promise<boolean> {
         try {
-            const query = `UPDATE carros SET marca = $2, modelo = $3, cor = $4, categoria = $5, dataFabricacao = $6, problema = $7 WHERE id = $1`;
+            const query = `UPDATE carros SET marca = $2, modelo = $3, cor = $4, categoria = $5, data_fabricacao = $6, problema = $7 WHERE id = $1`;
             const values = [b.id, b.marca, b.modelo, b.cor, b.categoria, b.dataFabricacao, b.problema];
             const result = await pool.query(query, values);
             if (result.rowCount) {

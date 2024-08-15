@@ -102,7 +102,7 @@ export default class Carro {
             modelo: this.modelo,
             cor: this.cor,
             categoria: this.categoria,
-            dataFabricacao: this.dataFabricacao,
+            data_fabricacao: this.dataFabricacao,
             problema: this.problema,
         };
     }

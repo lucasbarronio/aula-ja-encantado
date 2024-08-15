@@ -14,7 +14,7 @@ export default class PessoaController {
             pessoa.cpf = req.body.cpf;
             pessoa.email = req.body.email;
             pessoa.genero = req.body.genero;
-            const resultado = this._grupo.salvar(pessoa);
+            const resultado = await this._grupo.salvar(pessoa);
             return res.status(200).json(resultado);
         } catch (err) {
             console.error('Erro ao tentar salvar pessoa', err);
@@ -42,7 +42,7 @@ export default class PessoaController {
                 return res.status(404).json({ message: 'Pessoa não encontrada' });
             }
         } catch (err) {
-            console.error('Erro ao tentar consultar pessoa', err);
+            console.error(`Erro ao tentar consultar pessoa ${req.params.id}`, err);
             return res.status(500).send({ error: 'Falha ao tentar consultar pessoa.' });
         }
     }
@@ -51,11 +51,11 @@ export default class PessoaController {
         const id = Number(req.params.id);
         const pessoa: Pessoa | undefined = await this._grupo.recuperarUm(id);
         if (pessoa) {
-            pessoa.nome = req.params.nome;
-            pessoa.endereco = req.params.endereco;
-            pessoa.cpf = req.params.cpf;
-            pessoa.email = req.params.email;
-            pessoa.genero = req.params.genero;
+            pessoa.nome = req.body.nome;
+            pessoa.endereco = req.body.endereco;
+            pessoa.cpf = req.body.cpf;
+            pessoa.email = req.body.email;
+            pessoa.genero = req.body.genero;
             const resultado = await this._grupo.editar(pessoa);
             if (resultado) {
                 return res.status(200).json(pessoa);
