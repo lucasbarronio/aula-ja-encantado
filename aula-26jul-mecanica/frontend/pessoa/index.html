@@ -1,29 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
-    <h1>Minha tabela</h1>
-    <a href="cadastro.html">Cadastrar uma pessoa</a>
+  <nav class="nav-cabecalho">
+    <h1>Jovem Aprendiz</h1>
+    <ul>
+      <li><a href="../index.html">Homepage</a></li>
+      <li class="active"><a href="../pessoa/index.html">Pessoas</a></li>
+      <li><a href="../carro/index.html">Carros</a></li>
+    </ul>
+  </nav>
+  <div class="div-tabela">
     <table id="tabela" class="tabela">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Nome</th>
-            <th>Endereco</th>
-            <th>CPF</th>
-            <th>Email</th>
-            <th>Genero</th>
-            <th>Ações</th>
-          </tr>
-        </thead>
-        <tbody id="corpo-tabela">
-        </tbody>
-      </table>
-    <script src="script.js"></script>
+      <thead>
+        <tr>
+          <th class="table-title" colspan="7" style="padding: 15px 0;">Pessoas</th>
+        </tr>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Endereco</th>
+          <th>CPF</th>
+          <th>Email</th>
+          <th>Genero</th>
+          <th class="acoes-th">Ações</th>
+        </tr>
+      </thead>
+      <tbody id="corpo-tabela">
+      </tbody>
+    </table>
+  </div>
+  <script src="script.js"></script>
 </body>
+
 </html>
