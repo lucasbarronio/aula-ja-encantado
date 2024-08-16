@@ -1,32 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
-    <h1>Minha tabela</h1>
-    <a href="cadastro.html">Cadastrar um carro</a>
-    <div class="div-tabela">
+  <nav class="nav-cabecalho">
+    <h1>Jovem Aprendiz</h1>
+    <ul>
+      <li><a href="../index.html">Homepage</a></li>
+      <li><a href="../pessoa/index.html">Pessoas</a></li>
+      <li class="active"><a href="../carro/index.html">Carros</a></li>
+    </ul>
+  </nav>
+  <div class="div-tabela">
     <table id="tabela" class="tabela">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Marca</th>
-            <th>Modelo</th>
-            <th>Cor</th>
-            <th>Categoria</th>
-            <th>Ano de fabricação</th>
-            <th>Problema relatado</th>
-            <th class="acoes-th">Ações</th>
-          </tr>
-        </thead>
-        <tbody id="corpo-tabela">
-        </tbody>
-      </table>
-    </div>
-    <script src="script.js"></script>
+      <thead>
+        <tr>
+          <th class="table-title" colspan="8" style="padding: 15px 0;">Carros</th>
+        </tr>
+        <tr>
+          <th>ID</th>
+          <th>Marca</th>
+          <th>Modelo</th>
+          <th>Cor</th>
+          <th>Categoria</th>
+          <th>Ano de fabricação</th>
+          <th>Problema relatado</th>
+          <th class="acoes-th">Ações</th>
+        </tr>
+      </thead>
+      <tbody id="corpo-tabela">
+      </tbody>
+    </table>
+  </div>
+  <script src="script.js"></script>
 </body>
+
 </html>
