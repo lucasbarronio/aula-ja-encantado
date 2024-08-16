@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
   /* Change your font family */
-  font-family: sans-serif;
+  font-family: 'Montserrat';
 }
 
 .tabela {
   border-collapse: collapse;
-  margin: 25px 0;
+  margin: 70px 0;
   font-size: 0.9em;
   min-width: 1200px;
   border-radius: 5px 5px 0 0;
@@ -38,9 +40,8 @@
   border-bottom: 2px solid #009879;
 }
 
-.tabela tbody tr:hover{
+.tabela tbody tr:hover {
   color: #009879;
-  font-weight: bold;
 }
 
 .botaoeditar:hover a {
@@ -71,7 +72,7 @@ button {
   border-color: #009879;
 }
 
-button:hover{
+button:hover {
   background-color: #ffffff;
   color: #009879;
   font-weight: bold;
@@ -95,4 +96,46 @@ button:hover{
 
 .acoes button {
   margin-left: 5px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  background-color: #009879;
+  margin: -10px;
+}
+
+h1 {
+  margin: 0;
+  padding: 0 30px;
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 36px 28px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #026853;
+  font-weight: bold;
+}
+
+.table-title {
+  text-align: center;
+  font-size: 1.3em;
+}
+
+.active {
+  background-color: #026853;
 }
