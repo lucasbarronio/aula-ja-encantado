@@ -9,12 +9,24 @@
 </head>
 
 <body>
-  <nav class="nav-cabecalho">
+  <nav>
     <h1>Jovem Aprendiz</h1>
-    <ul>
+    <ul class="nav-menu">
       <li><a href="../index.html">Homepage</a></li>
-      <li><a href="../pessoa/index.html">Pessoas</a></li>
-      <li class="active"><a href="../carro/index.html">Carros</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Pessoas</a>
+        <div class="dropdown-content">
+          <a href="../pessoa/cadastro.html">Cadastrar</a>
+          <a href="../pessoa/index.html">Listagem</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Carros</a>
+        <div class="dropdown-content">
+          <a href="../carro/cadastro.html">Cadastrar</a>
+          <a href="../carro/index.html">Listagem</a>
+        </div>
+      </li>
     </ul>
   </nav>
   <div class="div-tabela">

@@ -7,29 +7,68 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <h1>Cadastro de carros</h1>
-    <a href="index.html">Listar carros</a>
-    <br>
-    <label>Marca:</label>
-    <input id="marca" type="text">
-    <br>
-    <label>Modelo:</label>
-    <input id="modelo" type="text">
-    <br>
-    <label>Cor:</label>
-    <input id="cor" type="text">
-    <br>
-    <label>Categoria:</label>
-    <input id="categoria" type="text">
-    <br>
-    <label>Ano de fabricacao:</label>
-    <input id="dataFabricacao" type="text">
-    <br>
-    <label>Problema relatado:</label>
-    <input id="problema" type="text">
-    <br>
-    <button id="salvar">Salvar</button>
-    <script src="cadastro.js"></script>
+
+<body class="telaCadastro">
+    <nav class="nav-cabecalho">
+        <h1>Jovem Aprendiz</h1>
+        <ul class="nav-menu">
+            <li><a href="../index.html">Homepage</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Pessoas</a>
+                <div class="dropdown-content">
+                    <a href="../pessoa/cadastro.html">Cadastrar</a>
+                    <a href="../pessoa/index.html">Listagem</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Carros</a>
+                <div class="dropdown-content">
+                    <a href="../carro/cadastro.html">Cadastrar</a>
+                    <a href="../carro/index.html">Listagem</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div class="fundo">
+
+        <header class="topPage">
+            <h2 class="titulo">Cadastro de carros</h2>
+        </header>
+
+        <br>
+        <section class="Cadastro">
+            <br>
+
+            <label>Modelo</label>
+            <input id="modelo" class="input" placeholder="Modelo" type="text">
+
+            <br>
+            <label>Marca</label>
+            <input id="marca" class="input" placeholder="Marca" type="text">
+
+            <br>
+            <label>Cor</label>
+            <input id="cor" class="input" placeholder="Cor" type="text">
+
+            <br>
+            <label>Categoria</label>
+            <input id="categoria" class="input" placeholder="Categoria" type="text">
+
+            <br>
+            <label>Data de Fabricação</label>
+            <input id="dataFabricacao" class="input" placeholder="Ano de fabricação" type="text">
+
+            <br>
+            <label>Problema</label>
+            <input id="problema" class="input" placeholder="Problema" type="text">
+
+            <br>
+            <button class="btn" id="salvar">Salvar</button>
+            <script src="cadastro.js"></script>
+        </section>
+
+    </div>
+
 </body>
+
 </html>
