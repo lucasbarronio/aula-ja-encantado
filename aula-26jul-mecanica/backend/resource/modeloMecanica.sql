@@ -4,7 +4,7 @@ CREATE TABLE "carros" (
   "modelo" varchar(255) NOT NULL,
   "cor" varchar(55) NOT NULL,
   "categoria" varchar(255) NOT NULL,
-  "dataFabricacao" char(4) NOT NULL,
+  "data_fabricacao" char(4) NOT NULL,
   "problema" varchar(255) NOT NULL
 );
 
