@@ -136,12 +136,12 @@ li a:hover {
 }
 
 .botaoexcluir {
-  background-color: #dd4b39;
-  border-color: #dd4b39;
+  background-color: #B53000;
+  border-color: #B53000;
 }
 
 .botaoexcluir:hover {
   background-color: #ffffff;
-  color: #dd4b39;
+  color: #B53000;
   font-weight: bold;
 }
