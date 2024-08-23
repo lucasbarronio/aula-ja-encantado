@@ -44,7 +44,7 @@ async function listarCarros() {
         const tdAcoes = document.createElement('td');
         tdAcoes.classList.add("acoes");
         tdAcoes.innerHTML = `<button  class="botaoeditar"><a href="cadastro.html?id=${item.id}">Editar</a></button>
-      <button onclick="excluir(${item.id})">Excluir</button>`;
+      <button class="botaoexcluir" onclick="excluir(${item.id})">Excluir</button>`;
         linha.appendChild(tdAcoes);
 
 
